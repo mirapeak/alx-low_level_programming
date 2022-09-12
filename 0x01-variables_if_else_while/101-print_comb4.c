@@ -6,22 +6,20 @@
  */
 int main(void)
 {
-	int ones = '0';
-	int tens = '0';
-	int hundreds = '0';
+	int n, m, l;
 
-	for (hundreds = '0'; hundreds <= '9'; hundreds++)
+	for (n = 48; n < 58; n++)
 	{
-		for (tens = '0'; tens <= '9'; tens++)/* prints tens digit*/
+		for (m = 49; m < 58; m++)
 		{
-			for (ones = '0'; ones <= '9'; ones++)/* prints ones digit*/
+			for (l = 50; l < 58; l++)
 			{
-				if (!((ones == tens) || (hundreds == tens) || (tens > ones) || (hundreds > tens)))/*eliminates repeatition*/
+				if (l > m && m > n)
 				{
-					putchar(hundreds);
-					putchar(tens);
-					putchar(ones);
-					if (!(ones == '9' && hundreds == '7' && tens == '8'))/*addes comma and space*/
+					putchar(n);
+					putchar(m);
+					putchar(l);
+					if (n != 55 || m != 56)
 					{
 						putchar(',');
 						putchar(' ');
